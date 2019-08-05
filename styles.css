@@ -191,9 +191,7 @@ p {
       background-color:#252B33;
       color: white;
       text-align: center;
-      height: 100px;
-      position: fixed;
-      bottom: 0;
+      height: 80px;
       width: 100%;
     }
 
