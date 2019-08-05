@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap');
+
+body {
+   
+}
+
+.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color:#ffffff;
+
+}
+
+.title {
+  margin: 10px;
+  padding: 10px;
+}
+
+h1 { 
+    color: #252B33;
+    text-align: right;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 8rem;
+
+
+}
+
+h2 { 
+    color:#252B33;
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+#about-me {
+  padding: 30px 30px;
+
+}
+.header {
+    overflow: hidden;
+    padding: 10px 10px;
+    background-color: #ffffff; 
+  }
+  
+.header a {
+    font-family: 'Raleway', sans-serif;
+    float: left;
+    color:#252B33;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    line-height: 20px;
+    border-radius: 5px;
+  }
+  
+  
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+.header a.active {
+    background-color: #252B33;
+    color: white;
+  }
+  
+.header-right {
+    float: none;
+    
+}
+  
+.main-footer {
+    background-color:#252B33;
+    height: 150px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+}
+
+ .other-footer {
+      background-color:#252B33;
+      height: 200px;
+      color: white;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+}
+
+}
+.cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 30px auto;
+    width: 350px;
+    height: 350px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .card .card_image {
+    width: inherit;
+    height: inherit;
+  }
+  
+  .card .card_image img {
+    width: inherit;
+    height: inherit;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(0.9, 0.9);
+
+  }
+  
+  @media all and (max-width: 500px) {
+    .card-list {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }
+  
+  
+  /*
+  .card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    transition: 0.4s;
+  }
+  */
+
+
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-family: 'Raleway', sans-serif;
+
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-family: 'Raleway', sans-serif;
+
+  }
+  
+  input[type=submit]:hover {
+    background-color:#252B33;
+    font-family: 'Raleway', sans-serif;
+
+  }
+  
+  .container-form {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 40px 40px;
+    font-family: 'Raleway', sans-serif;
+
+  }
+
+  /*Smartphone*/
+
+  @media screen and (min-width: 321px) and (max-width: 768px) {
+
+    #photo-main {
+      display: flex;
+      height: 200%;
+    }
+
+    h1 { 
+      color: #252B33;
+      text-align: right;
+      font-family: 'Bungee Shade', cursive;
+      font-size: 2.5rem;
+    }
+
+    .main-footer {
+      background-color:#252B33;
+      color: white;
+      text-align: center;
+      height: 300px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .other-footer {
+    background-color:#252B33;
+    height: 500px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+
+}
