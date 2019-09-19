@@ -75,8 +75,9 @@ p {
 }
   
 .main-footer {
+  padding: 20px;
     background-color:#252B33;
-    height: 150px;
+    height: 100%;
     color: white;
     text-align: center;
     width: 100%;
@@ -85,7 +86,7 @@ p {
 
  .other-footer {
       background-color:#252B33;
-      height: 250px;
+      height: 100%;
       color: white;
       text-align: center;
       width: 100%;
@@ -191,7 +192,7 @@ p {
       background-color:#252B33;
       color: white;
       text-align: center;
-      height: 200px;
+      height: 100%;
       width: 100%;
       position:fixed;
     }
