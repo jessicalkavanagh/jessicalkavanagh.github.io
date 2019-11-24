@@ -4,8 +4,158 @@
 
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap');
 
-body {
-   
+
+a{
+  color: #111
+}
+
+.photo{
+  position: absolute;
+  top: 20%;
+  display: block;
+}
+
+.photo img{
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(120%);
+  box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+  display: block;
+  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  margin-top: -10px;
+}
+
+.photo:hover img{
+  box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+}
+
+.photo .glow-wrap{
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin-top: -10px;
+}
+
+.photo .glow{
+  display: block;
+  position:absolute;
+  width: 40%;
+  height: 200%;
+  top: 0;
+  filter: blur(5px);
+  transform: rotate(45deg) translate(-450%, 0);
+  transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo:hover .glow{
+  transform: rotate(45deg) translate(450%, 0);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo:hover img,
+.photo:hover .glow-wrap{
+  margin-top: 0;
+}
+
+h4{
+  position: absolute;
+  z-index: 1;
+  transform: translate(-25%, -65%);
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  line-height: 1.2;
+}
+
+
+/* Ends */
+
+
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 8em;
+	line-height: 1;
+	color: #D4927A;
+	display: inline-block;
+}
+.link--kukuri {
+	text-transform: uppercase;
+	font-weight: 900;
+	overflow: hidden;
+	line-height: 0.75;
+	color: #BA7A7B;
+}
+
+.link--kukuri:hover {
+	color: #00003f;
+}
+
+.link--kukuri::after {
+	content: '';
+	position: absolute;gi
+	height: 16px;
+	width: 100%;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+	background:#F9F9F9;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link--kukuri:hover::after {
+	transform: translate3d(100%,0,0);
+}
+
+.link--kukuri::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #BA7A7B;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+
+.link--kukuri:hover::before {
+	width: 100%;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #4875B4;
+  color: white;
+}
+.fa-github {
+  background: #000000;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-instagram {
+  background: #CC3366;
+  color: white;
 }
 
 .sticky {
@@ -16,16 +166,22 @@ body {
 
 }
 
+.image-crop{
+  max-width: 100%;
+  height: 50px;
+
+}
+
 .title {
   margin: 10px;
   padding: 10px;
 }
 
 h1 { 
-    color: #252B33;
     text-align: right;
     font-family: 'Bungee Shade', cursive;
-    font-size: 7rem;
+    font-size: 1rem;
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
 }
 
 h2 { 
@@ -35,6 +191,10 @@ h2 {
 
 p {
     font-family: 'Raleway', sans-serif;
+}
+
+li {
+  font-family: 'Raleway', sans-serif;
 }
 
 #about-me {
@@ -74,26 +234,7 @@ p {
     
 }
   
-.main-footer {
-  padding: 20px;
-    background-color:#252B33;
-    height: 100%;
-    color: white;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-}
 
- .other-footer {
-      background-color:#252B33;
-      height: 100%;
-      color: white;
-      text-align: center;
-      width: 100%;
-      position: fixed;
-}
-
-}
 .cards-list {
     z-index: 0;
     width: 100%;
@@ -104,10 +245,13 @@ p {
   
   .card {
     margin: 30px auto;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
+    border-radius: 40px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.4s;
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+
   }
   
   .card .card_image {
@@ -118,6 +262,16 @@ p {
   .card .card_image img {
     width: inherit;
     height: inherit;
+  }
+  
+  .card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
   }
   
   .card:hover {
@@ -131,8 +285,7 @@ p {
       flex-direction: column;
     }
   }
-  
-
+ 
 
 
   input[type=text], select, textarea {
@@ -154,7 +307,6 @@ p {
     margin-top: 10px;
     margin-bottom: 16px;
     font-family: 'Raleway', sans-serif;
-    border-radius: 10px;
 
   }
   
@@ -174,7 +326,7 @@ p {
 
   /*Smartphone*/
 
-  @media screen and (min-width: 321px) and (max-width: 768px) {
+  @media screen and (min-width: 321px) and (max-width: 780px) {
 
     #photo-main {
       display: flex;
@@ -185,25 +337,8 @@ p {
       color: #252B33;
       text-align: right;
       font-family: 'Bungee Shade', cursive;
-      font-size: 2rem;
+      font-size: 0.5rem;
     }
-
-    .main-footer {
-      background-color:#252B33;
-      color: white;
-      text-align: center;
-      height: 100%;
-      width: 100%;
-      position:fixed;
-    }
-
-    .other-footer {
-    background-color:#252B33;
-    height: 100px;
-    color: white;
-    text-align: center;
-    width: 100%;
-}
 
 
 }
